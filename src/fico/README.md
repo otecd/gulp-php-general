@@ -1,0 +1,4 @@
+# README #
+
+# fico/
+for favicons

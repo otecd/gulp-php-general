@@ -1,0 +1,12 @@
+=font-face($font-family, $file-path, $weight: 400, $style: normal, $file-formats: eot woff2 woff ttf)
+    $src: ()
+    $formats-map: (eot: url("#{$file-path}.eot?#iefix") format("embedded-opentype"), woff2: url("#{$file-path}.woff2") format("woff2"), woff: url("#{$file-path}.woff") format("woff"), ttf: url("#{$file-path}.ttf") format("truetype"))
+    @each $key, $value in $formats-map
+        @if contains($file-formats, $key)
+            $src: append($src, $value, comma)
+    @font-face
+        font:
+            family: $font-family
+            style: $style
+            weight: $weight
+        src: $src
