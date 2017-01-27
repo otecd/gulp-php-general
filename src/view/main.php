@@ -42,13 +42,6 @@
 	<script src="libs/ExplorerCanvas/excanvas.js"></script>
 	<![endif]-->
 
-</head>
-<body>
-
-	<header>
-		<h1><?=$h1?></h1>
-	</header>
-
 	<!-- Load Scripts Start -->
 	<script>
 		var scr = {"scripts":[
@@ -57,6 +50,13 @@
 	</script>
 	<?php include_once 'load_js_js.php';?>
 	<!-- Load Scripts End -->
+
+</head>
+<body>
+
+	<header>
+		<h1><?=$h1?></h1>
+	</header>
 
 </body>
 </html>
