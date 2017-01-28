@@ -37,8 +37,6 @@
 	<script src="libs/html5shiv/dist/html5shiv.min.js"></script>
 	<script src="libs/html5shiv/dist/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/dest/respond.min.js"></script>
-	<script src="libs/pie-htc/PIE.js"></script>
-	<script src="js/fixes.min.js"></script>
 	<script src="libs/ExplorerCanvas/excanvas.js"></script>
 	<![endif]-->
 
