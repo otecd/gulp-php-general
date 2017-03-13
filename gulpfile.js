@@ -1,12 +1,14 @@
 'use strict';
 
 var gulp = require('gulp'),
+    rigger = require('gulp-rigger'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     autoPrefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
+    concat = require('gulp-concat'),
     newer = require('gulp-newer'),
     del = require('del'),
     babel = require('gulp-babel'),
@@ -70,7 +72,9 @@ var gulp = require('gulp'),
 
     webconfig = {
         proxy: "http://localhost/blank-templates/gulp-php-general/bld"
-    };
+    },
+
+    nm = 'ur-project'; // change it to your project's name
 
 function buildPhp() {
     return gulp.src(path.source.php)
@@ -82,7 +86,7 @@ function buildJs() {
     return gulp.src(path.source.js)
         .pipe(babel())
         .pipe(uglify())
-        .pipe(rename({suffix: '.min', prefix : ''}))
+        .pipe(concat(nm+'.min.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 }
@@ -101,7 +105,9 @@ function buildCss() {
             browsers: ['ie 8-9', 'last 2 versions']
         }))
         .pipe(cleanCSS())
-        .pipe(rename({suffix: '.min', prefix : ''}))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 }

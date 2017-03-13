@@ -6,9 +6,18 @@
 
 	<base href="">
 
-	<title><?=$title?></title>
-	<meta name="description" content="<?=$description?>">
+	<title><?=$page_title?></title>
+	<meta name="description" content="<?=$page_description?>">
+	<meta name="keywords" content="<?=$page_keywords?>">
 
+	<meta name="robots" content="all">
+
+	<meta property="og:url" content="<?=$page_url?>">
+	<meta property="og:title" content="<?=$page_title?>">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="">
+
+	<meta http-equiv="content-language" content="ru">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,6 +25,8 @@
 	<meta name="msapplication-navbutton-color" content="#fff">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
+	<link rel="canonical" href="<?=$page_url?>">
+	<link rel="icon" href="fico/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="fico/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="fico/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="fico/apple-touch-icon-72x72.png">
